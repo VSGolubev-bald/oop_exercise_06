@@ -16,7 +16,7 @@ void menu() {
 void usingStack() {
     int command, minicommand,index;
     double val;
-    container::Stack<trapeze<double>,my_allocator<trapeze<double>,330>> st;
+    container::Stack<trapeze<double>,my_all::my_allocator<trapeze<double>,330>> st;
     for (;;) {
         std::cin >> command;
         if (command == 1) {
@@ -96,7 +96,7 @@ int main() {
     menu();
     usingStack();
     std::map<int, int, std::less<int>,
-            my_allocator<std::pair<const int, int>, 80>> mp;
+            my_all::my_allocator<std::pair<const int, int>, 80>> mp;
     for(int i = 0; i < 2; ++i){
         mp[i] = i;
     }
